@@ -1,0 +1,14 @@
+services:
+  app:
+    # Constrói a imagem a partir do Dockerfile no diretório atual (.).
+    # O Docker Compose procurará por um arquivo chamado 'Dockerfile'.
+    build: .
+    # Mapeia a porta 8000 do seu computador para a porta 8000 do container,
+    # permitindo o acesso à API.
+    container_name: minha-fastapi-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+ 
+
